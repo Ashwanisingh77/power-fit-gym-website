@@ -1,0 +1,191 @@
+*{
+  box-sizing:border-box;
+}body{
+  margin:0;
+  font-family:sans-serif;
+  color:white;
+  background:black;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 5%;
+  background:rgba(0,0,0,0.8);
+}
+
+nav h1{
+  color:#00ffcc;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+}
+
+nav ul li{
+  margin-left:20px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61') center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.overlay{
+  background:rgba(0,0,0,0.6);
+  padding:40px;
+  text-align:center;
+}
+
+.overlay h1{
+  font-size:50px;
+}
+
+.overlay button{
+  margin-top:20px;
+  padding:12px 25px;
+  background:#00ffcc;
+  border:none;
+}
+
+/* SECTION */
+.section{
+  padding:80px 10%;
+  text-align:center;
+}
+
+.dark{
+  background:#111;
+}
+
+/* IMAGE STRIP */
+.image-section{
+  height:300px;
+  background:url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f') center/cover;
+}
+
+/* CARDS */
+.cards{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.card{
+  background:#111;
+  padding:20px;
+  width:200px;
+}
+
+/* GALLERY */
+.gallery{
+  display:flex;
+  gap:10px;
+  padding:30px;
+}
+
+.gallery img{
+  width:33%;
+  height:200px;
+  object-fit:cover;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#111;
+}
+/* NAVBAR HOVER */
+nav a{
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#00ffcc;
+  transform:scale(1.1);
+}
+
+/* BUTTON HOVER */
+button{
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#00ffaa;
+  transform:scale(1.1);
+}
+
+/* CARD HOVER */
+.card{
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.05);
+  background:#00ffcc;
+  color:black;
+}
+
+/* GALLERY IMAGE HOVER */
+.gallery img{
+  transition:0.4s;
+}
+
+.gallery img:hover{
+  transform:scale(1.1);
+  filter:brightness(1.2);
+}
+
+/* HERO TEXT HOVER */
+.overlay h1{
+  transition:0.3s;
+}
+
+.overlay h1:hover{
+  color:#00ffcc;
+}
+
+/* SECTION HEADINGS HOVER */
+.section h2{
+  transition:0.3s;
+}
+
+.section h2:hover{
+  color:#00ffcc;
+  letter-spacing:2px;
+}
+
+/* IMAGE STRIP HOVER */
+.image-section{
+  transition:0.5s;
+}
+
+.image-section:hover{
+  filter:brightness(1.2);
+}
+
+/* FOOTER HOVER */
+footer{
+  transition:0.3s;
+}
+
+footer:hover{
+  background:#222;
+}
