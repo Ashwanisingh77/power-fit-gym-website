@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>About</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about PowerFit Gym — world-class facilities, modern equipment, and expert trainers dedicated to your transformation." />
+  <title>About — PowerFit Gym</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <!-- NAVBAR -->
+  <nav id="navbar" class="navbar navbar--scrolled" role="navigation" aria-label="Main navigation">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo"><span class="accent">POWER</span><span>FIT</span></a>
+      <ul class="navbar__links" style="display:flex">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="about.html" class="navbar__link active">About</a></li>
+        <li><a href="services.html" class="navbar__link">Services</a></li>
+        <li><a href="contact.html" class="navbar__link">Contact</a></li>
+      </ul>
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+    </div>
+    <div class="navbar__mobile" id="mobile-menu" aria-hidden="true">
+      <ul class="navbar__mobile-links">
+        <li><a href="index.html" class="navbar__mobile-link">Home</a></li>
+        <li><a href="about.html" class="navbar__mobile-link active">About</a></li>
+        <li><a href="services.html" class="navbar__mobile-link">Services</a></li>
+        <li><a href="contact.html" class="navbar__mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<nav>
-  <h1>POWERFIT</h1>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <main>
+    <section class="section-padding" style="padding-top:var(--sp-16);background:var(--color-bg);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__tag">Who We Are</span>
+          <h1 class="section-header__title">About Us</h1>
+        </div>
+        <p class="text-secondary" style="max-width:700px;margin:0 auto;text-align:center;line-height:1.8;font-size:1.1rem;">
+          We provide world-class gym facilities with modern equipment and expert trainers.
+          Our mission is to empower every individual to achieve their peak physical potential
+          in an environment that inspires greatness.
+        </p>
+      </div>
+    </section>
+  </main>
 
-<section class="page">
-  <h1>About Us</h1>
-  <p>We provide world-class gym facilities with modern equipment and expert trainers.</p>
-</section>
+  <footer class="footer">
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="text-muted text-xs">© 2026 PowerFit Gym. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
+  <script>
+    /* Minimal mobile nav toggle for sub-pages */
+    const t=document.getElementById('nav-toggle'),m=document.getElementById('mobile-menu');
+    if(t&&m){t.addEventListener('click',()=>{const o=m.classList.toggle('open');t.classList.toggle('open');t.setAttribute('aria-expanded',o);m.setAttribute('aria-hidden',!o);});}
+  </script>
+  <script src="script.js"></script>
 </body>
+
 </html>

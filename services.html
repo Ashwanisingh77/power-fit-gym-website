@@ -1,31 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Services</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore PowerFit Gym services — Weight Training, Cardio, Diet Plans, and Yoga programs designed by experts." />
+  <title>Services — PowerFit Gym</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <!-- NAVBAR -->
+  <nav id="navbar" class="navbar navbar--scrolled" role="navigation" aria-label="Main navigation">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo"><span class="accent">POWER</span><span>FIT</span></a>
+      <ul class="navbar__links" style="display:flex">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="about.html" class="navbar__link">About</a></li>
+        <li><a href="services.html" class="navbar__link active">Services</a></li>
+        <li><a href="contact.html" class="navbar__link">Contact</a></li>
+      </ul>
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+    </div>
+    <div class="navbar__mobile" id="mobile-menu" aria-hidden="true">
+      <ul class="navbar__mobile-links">
+        <li><a href="index.html" class="navbar__mobile-link">Home</a></li>
+        <li><a href="about.html" class="navbar__mobile-link">About</a></li>
+        <li><a href="services.html" class="navbar__mobile-link active">Services</a></li>
+        <li><a href="contact.html" class="navbar__mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<nav>
-  <h1>POWERFIT</h1>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <main>
+    <section class="section-padding" style="padding-top:var(--sp-16);background:var(--color-bg);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__tag">What We Offer</span>
+          <h1 class="section-header__title">Our Services</h1>
+        </div>
 
-<section class="page">
-  <h1>Our Services</h1>
-  <div class="cards">
-    <div class="card">💪 Weight Training</div>
-    <div class="card">🏃 Cardio</div>
-    <div class="card">🥗 Diet Plans</div>
-  </div>
-</section>
+        <div class="services__grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+          <div class="services__card glass-card">
+            <div class="services__card-inner">
+              <span class="services__emoji" aria-hidden="true">💪</span>
+              <h3>Weight Training</h3>
+              <p class="text-muted text-sm">Build strength and muscle with our comprehensive weight training programs featuring premium equipment and expert guidance.</p>
+            </div>
+          </div>
+          <div class="services__card glass-card">
+            <div class="services__card-inner">
+              <span class="services__emoji" aria-hidden="true">🏃</span>
+              <h3>Cardio</h3>
+              <p class="text-muted text-sm">High-intensity cardio sessions designed to boost your endurance, burn calories, and improve cardiovascular health.</p>
+            </div>
+          </div>
+          <div class="services__card glass-card">
+            <div class="services__card-inner">
+              <span class="services__emoji" aria-hidden="true">🥗</span>
+              <h3>Diet Plans</h3>
+              <p class="text-muted text-sm">Customized nutrition plans crafted by certified dietitians to fuel your fitness goals and optimize performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer">
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="text-muted text-xs">© 2026 PowerFit Gym. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const t=document.getElementById('nav-toggle'),m=document.getElementById('mobile-menu');
+    if(t&&m){t.addEventListener('click',()=>{const o=m.classList.toggle('open');t.classList.toggle('open');t.setAttribute('aria-expanded',o);m.setAttribute('aria-hidden',!o);});}
+  </script>
+  <script src="script.js"></script>
 </body>
+
 </html>
